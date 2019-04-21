@@ -68,6 +68,7 @@
       Console.ReadLine();
   }
 ```
-##Output
+
+## Output
 
 ![Alt Text](https://github.com/ripplejb/TPLvsWhenAll/blob/master/TPLVsWhenAll/output.gif)
