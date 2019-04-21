@@ -44,7 +44,7 @@ namespace TPLVsWhenAll
             for (var i = 0; i < 10; i++)
             {
                 var i1 = i;
-                var t = new WaitPrint().WaitAndPrint($"WhenAll {i1}");
+                var t = WaitAndPrintForWhenAll($"WhenAll {i1}");
                 list.Add(t);
             }
 
@@ -57,24 +57,21 @@ namespace TPLVsWhenAll
             var list = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             Parallel.ForEach(list, i =>
             {
-                new WaitPrint().WaitAndPrint2($"Parallel ForEach {i}");
+                WaitAndPrintForParallel($"Parallel ForEach {i}");
             });
         }
 
-        private class WaitPrint
+        private static async Task<string> WaitAndPrintForWhenAll(string str)
         {
-            public async Task<string> WaitAndPrint(string str)
-            {
-                await Task.Delay(3000); // Wait
-                Console.WriteLine(str);
-                return str;
-            }
+            await Task.Delay(3000); // Wait
+            Console.WriteLine(str);
+            return str;
+        }
 
-            public void WaitAndPrint2 (string str)
-            {
-                Thread.Sleep(10000); // Wait
-                Console.WriteLine(str);
-            }
+        private static void WaitAndPrintForParallel(string str)
+        {
+            Thread.Sleep(3000); // Wait
+            Console.WriteLine(str);
         }
 
     }
