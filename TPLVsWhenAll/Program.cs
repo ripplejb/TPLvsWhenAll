@@ -14,6 +14,9 @@ namespace TPLVsWhenAll
          */
         static void Main(string[] args)
         {
+            Console.WriteLine("Press Any Key to start...");
+            Console.ReadLine();
+
             Console.WriteLine("=========================");
             Console.WriteLine("Parallel 1 ForEach start");
             Console.WriteLine("=========================");
@@ -33,9 +36,9 @@ namespace TPLVsWhenAll
             Console.WriteLine("Parallel 2 ForEach start");
             Console.WriteLine("=========================");
             ParallelForEach();
-
-
+            
             Console.ReadLine();
+
         }
 
         static async void WhenAll()
