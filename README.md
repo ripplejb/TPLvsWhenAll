@@ -2,7 +2,7 @@
 
 I was asked to explain the difference between TPL and Async-Await. My understanding is TPL = Task Parallel Library contains API to simplify the process of adding parallelism and concurrency to applications. TPL handles partitioning of the work, the scheduling of threads on the ThreadPool, cancellation support, state management, and other low-level details. Therefore the answer to the question is TPL is a superset and async-await is a subset. However, the intention behind the question was to know what is the difference between parallelism and concurrency. Unfortunately, the difference is subtle and because of that, the misunderstanding is widespread. So here are my two cents on the subject.
 
-In order to understand the TPL, one must understand the difference between parallelism and concurrency. Here is a small but excellent explanation of the difference between [parallelism and concurrency] 
+In order to understand the TPL, one must understand the difference between parallelism and concurrency. Here is a brief but excellent explanation of the difference between [parallelism and concurrency] 
 
 [parallelism and concurrency]: (http://tutorials.jenkov.com/java-concurrency/concurrency-vs-parallelism.html)
 
