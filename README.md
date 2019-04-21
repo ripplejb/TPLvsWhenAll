@@ -7,7 +7,7 @@ In order to understand the TPL, one must understand the difference between paral
 [parallelism and concurrency]: (http://tutorials.jenkov.com/java-concurrency/concurrency-vs-parallelism.html)
 
 Concurrency = Doing more than one thing at a time.
-Parallelism = An application splits its tasks up into smaller subtasks which can be processed in parallel.
+Parallelism = Doing lots of work by dividing it up among multiple threads that run concurrently.
 
 Code 1.1 below is an example of concurrency. In this case, When all is called with await, the calling thread is not going to be blocked.
 
