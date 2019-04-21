@@ -10,7 +10,7 @@ namespace TPLVsWhenAll
 
         /**
          * When we call ParallelForEach(), it waits till all the call inside the loop are completed.
-         * When we call WhenAll(), it move on to next line.
+         * When we call WhenAll(), it move on to next line (Asynchronous). 
          */
         static void Main(string[] args)
         {
@@ -64,11 +64,10 @@ namespace TPLVsWhenAll
             });
         }
 
-        private static async Task<string> WaitAndPrintForWhenAll(string str)
+        private static async Task WaitAndPrintForWhenAll(string str)
         {
             await Task.Delay(3000); // Wait
             Console.WriteLine(str);
-            return str;
         }
 
         private static void WaitAndPrintForParallel(string str)
